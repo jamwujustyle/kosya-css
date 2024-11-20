@@ -142,7 +142,7 @@ button:hover {
     display: none;
 }
 #misik {
-    margin-right: 800px;
+    margin-right: 500px;
     margin-top: 130px;
     border-radius: 20px;
     opacity: 0;
@@ -157,7 +157,7 @@ button:hover {
     opacity: 0;
     transform: translateY(-200px);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    margin-left: 700px;
+    margin-left: 650px;
     margin-top: 1px;
     width: 200px;
     transition-delay: 1s;
