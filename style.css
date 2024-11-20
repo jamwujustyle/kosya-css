@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Ga+Maamli&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon {
+    border-radius: 10px;
+}
+
+#find {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    max-width: 360px; 
+    padding: 20px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    position: relative; 
+}
+
+#find h1 {
+    font-size: 3.5rem; 
+    color: #333333;
+    margin-bottom: 15px; 
+}
+
+#find p {
+    font-size: 1rem; 
+    color: #666666; 
+    margin: 0; 
+}
+
+body {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 70%;
+}
+
+button {
+    font-family: "Bokor", system-ui;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: #ffffff;
+    background-color: #d66574;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.6s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #aaaaaa;
+    transform: scale(1.2);
+    color: black;
+}
+
+#see_secret::after {
+    content: ' ➔';
+    font-weight: bold;
+}
+
+#see_secret:hover {
+    background-color: #0056b3;
+}
+
+#find:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+#find:hover .hearts {
+    opacity: 1; 
+}
+
+.hearts::before,
+.hearts::after {
+    content: '❤';
+    position: absolute;
+    font-size: 2rem;
+    color: #d66574;
+    animation: float 3s ease-in-out infinite;
+    opacity: 1;
+}
+
+.hearts::before {
+    top: 100%;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.hearts::after {
+    top: 90%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(0.5) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: translateY(-300%) scale(0.5);
+        opacity: 0;
+    }
+}
+.hidden {
+    display: none;
+}
+#misik {
+    margin-right: 800px;
+    margin-top: 130px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+#cloud-box {
+    font-family: "Ga Maamli", sans-serif;
+    /* position: absolute; */
+    background-color: rgba(173, 216, 230, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    margin-left: 700px;
+    margin-top: 1px;
+    width: 200px;
+    transition-delay: 1s;
+}
+#meaning {
+    font-family: "Ga Maamli", sans-serif;
+    /* position: absolute; */
+    background-color: rgba(230, 230, 250, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    margin-left: 920px;
+    margin-top: -200px;
+    margin-bottom: 200px;
+    width: 200px;
+    transition-delay: 2s;
+}
+
+#sliding-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.overlay {
+    position: absolute; 
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;  
+    font-size: 4rem;  
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 3);  
+}
